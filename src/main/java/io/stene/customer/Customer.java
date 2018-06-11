@@ -9,4 +9,5 @@ public class Customer {
     Integer id;
     String ssn;
     String name;
+    String address;
 }
