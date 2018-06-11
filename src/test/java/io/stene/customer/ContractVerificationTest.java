@@ -9,7 +9,6 @@ import au.com.dius.pact.provider.junit.target.TestTarget;
 import au.com.dius.pact.provider.spring.SpringRestPactRunner;
 import au.com.dius.pact.provider.spring.target.SpringBootHttpTarget;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @Provider("customer")
@@ -18,9 +17,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 @RunWith(SpringRestPactRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class ContractVerificationTest {
-
-    @Autowired
-    CustomerRepository customerRepository;
 
     @TestTarget
     public final Target target = new SpringBootHttpTarget();
