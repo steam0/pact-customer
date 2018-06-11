@@ -29,9 +29,4 @@ public class ContractVerificationTest {
     public void toDefaultState() {
         System.out.println("Now service in default state");
     }
-
-    @State("Customer with ssn(71039012345) exists.")
-    public void getCustomerPactTest() {
-        customerRepository.add(Customer.builder().name("Roger Antonsen").ssn("71039012345").build());
-    }
 }
