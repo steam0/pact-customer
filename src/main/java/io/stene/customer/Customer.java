@@ -1,5 +1,6 @@
 package io.stene.customer;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
 import lombok.Data;
 
@@ -7,7 +8,8 @@ import lombok.Data;
 @Builder
 public class Customer {
     Integer id;
-    String ssn;
+    @JsonProperty("ssn")
+    String socialSecurityNumber;
     String name;
-    String address;
+    Address address;
 }

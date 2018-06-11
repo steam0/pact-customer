@@ -23,7 +23,7 @@ public class CustomerRepository {
 
     public Customer get(String ssn) {
         return map.values().stream()
-                .filter(person -> person.getSsn().equals(ssn))
+                .filter(person -> person.getSocialSecurityNumber().equals(ssn))
                 .findFirst().orElse(null);
     }
 }
