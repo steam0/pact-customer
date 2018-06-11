@@ -32,6 +32,6 @@ public class ContractVerificationTest {
 
     @State("Customer with ssn(71039012345) exists.")
     public void getCustomerPactTest() {
-        customerRepository.add(Customer.builder().name("Roger Antonsen").ssn("71039012345").build());
+        customerRepository.add(Customer.builder().name("Roger Antonsen").ssn("71039012345").address("Some Blvd").build());
     }
 }
