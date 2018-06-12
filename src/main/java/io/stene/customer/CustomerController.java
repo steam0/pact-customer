@@ -12,11 +12,6 @@ public class CustomerController {
     @Autowired
     CustomerRepository customerRepository;
 
-    @GetMapping(path = "/{ssn}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-    public Customer getCustomer(@PathVariable("ssn") String ssn) {
-        return customerRepository.get(ssn);
-    }
-
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping(consumes = MediaType.APPLICATION_JSON_UTF8_VALUE, produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public Customer createCustomer(@RequestBody Customer customer) {

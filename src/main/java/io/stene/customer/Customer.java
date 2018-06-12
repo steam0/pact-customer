@@ -6,8 +6,8 @@ import lombok.Data;
 @Data
 @Builder
 public class Customer {
-    Integer id;
-    String ssn;
-    String name;
-    String address;
+    private Integer id;
+    private String ssn;
+    private String name;
+    private String address;
 }
